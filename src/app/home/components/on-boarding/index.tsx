@@ -44,10 +44,10 @@ export default function SidebarVoucher() {
       <div className="w-[80%] bg-black relative flex items-center px-10 h-[385px]">
         <div className="flex-1 text-white">
           <div className="flex items-center gap-4 mb-5">
-            <span className="w-10 h-10 flex items-center justify-center">
+            <span className="w-10 h-10 text-7xl flex items-center justify-center mb-5">
               <FaApple />
             </span>
-            <span className="font-poppins text-lg">iPhone 14 Series</span>
+            <span className="font-poppins mt-[-2%] text-lg">iPhone 14 Series</span>
           </div>
           <h2 className="text-5xl font-bold font-poppins mb-4 leading-tight">
             Up to 10%<br />
