@@ -48,7 +48,7 @@ const products: Product[] = [
 ];
 export default function SellingProducts() {
   return (
-    <section className="font-poppins p-6 ml-12">
+    <section className="font-poppins ml-1 mb-[10%] w-[95%]">
       <div className="flex justify-between items-center mb-6">
         <div className="relative group">
           <div className='flex gap-4.5 mb-9'>

@@ -10,7 +10,9 @@ import Navbar from "../shared-components/Navbar";
 import SellingProducts from "./components/selling-products";
 import HomePage from "./components/category";
 import SidebarVoucher from "./components/on-boarding";
+import ExploreMusic from "./components/music";
 import Footer from "../shared-components/footer";
+import NewArrival from "./components/new-arrival";
 
 function useCountdown(target: Date | null) {
  const [now, setNow] = useState<Date | null>(target ? new Date() : null);
@@ -228,7 +230,7 @@ const gridProducts = [
    id: 7,
    name: "GP11 Shooter USB Gamepad",
    price: 660,
-   image: "/explore/gamepad.png",
+   image: "/explore/gamepadd.png",
    rating: 5,
    reviews: 55,
    isNew: true,
@@ -244,76 +246,28 @@ const gridProducts = [
    colors: ["#009688", "#000"],
  },
  {
-   id: 9,
-   name: "Quilted Satin Jacket",
-   price: 660,
-   image: "/explore/jacket.png",
+   id: 5,
+   name: "SteelSeries Wireless Mouse",
+   price: 210,
+   image: "/todays-image/wireless-mouse.png",
    rating: 4,
-   reviews: 55,
-   colors: ["#009688", "#000"],
+   reviews: 43,
  },
  {
-   id: 10,
-   name: "Quilted Satin Jacket",
-   price: 660,
-   image: "/explore/jacket.png",
-   rating: 4,
-   reviews: 55,
-   colors: ["#009688", "#000"],
+   id: 6,
+   name: "Logitech G Pro Headset",
+   price: 180,
+   image: "/todays-image/headset.png",
+   rating: 4.5,
+   reviews: 54,
  },
  {
-   id: 11,
-   name: "Quilted Satin Jacket",
-   price: 660,
-   image: "/explore/jacket.png",
+   id: 7,
+   name: "Anker USB Hub",
+   price: 30,
+   image: "/todays-image/usb-hub.png",
    rating: 4,
-   reviews: 55,
-   colors: ["#009688", "#000"],
- },
- {
-   id: 12,
-   name: "Quilted Satin Jacket",
-   price: 660,
-   image: "/explore/jacket.png",
-   rating: 4,
-   reviews: 55,
-   colors: ["#009688", "#000"],
- },
- {
-   id: 13,
-   name: "Quilted Satin Jacket",
-   price: 660,
-   image: "/explore/jacket.png",
-   rating: 4,
-   reviews: 55,
-   colors: ["#009688", "#000"],
- },
- {
-   id: 14,
-   name: "Quilted Satin Jacket",
-   price: 660,
-   image: "/explore/jacket.png",
-   rating: 4,
-   reviews: 55,
-   colors: ["#009688", "#000"],
- },
- {
-   id: 15,
-   name: "Quilted Satin Jacket",
-   price: 660,
-   image: "/explore/jacket.png",
-   rating: 4,
-   reviews: 55,
-   colors: ["#009688", "#000"],
- },
- {
-   id: 16,
-   name: "Quilted Satin Jacket",
-   price: 660,
-   image: "/explore/jacket.png",
-   rating: 4,
-   reviews: 55,
-   colors: ["#009688", "#000"],
+   reviews: 12,
  }
 ];
 
@@ -341,12 +295,13 @@ export default function TodaysDealsPage() {
       <Header/>
       <Navbar />
       <SidebarVoucher />
+<div className="mb-[5%]"></div>
    <div className="w-full bg-white min-h-screen pl-35 px-5 pt-10 overflow-x-hidden">
      <div className="flex justify-between items-center mb-7">
-       <div className="flex items-center gap-2">
-         <span className="w-5 h-10 rounded ml-1.5 bg-[#DB4444]"></span>
-         <span className="font-semibold text-lg ml-2 text-[#DB4444]">Today's</span>
-       </div>
+        <div className="flex gap-2 mb-6 items-center">
+          <div className="bg-red-400 w-3.5 h-8.5 rounded-sm"></div>
+          <p className="text-red-400 text-sm sm:text-[16px]">Today's</p>
+        </div>
        <div className="flex gap-2 pr-20">
          <button
            className={`rounded-full bg-white shadow text-black w-9 h-9 flex items-center justify-center border border-gray-200 ${page === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
@@ -393,8 +348,6 @@ export default function TodaysDealsPage() {
      </div>
 
 
-
-
      <ProductCarousel
        products={products.slice(page * itemsPerPage, (page + 1) * itemsPerPage)}
      />
@@ -407,8 +360,11 @@ export default function TodaysDealsPage() {
        </Button>
      </div>
 
+
+<div className="mb-[5%]"></div>
       <HomePage />
       <SellingProducts/>
+      <ExploreMusic />
      <ExploreProducts
        products={gridProducts}
        page={gridPage}
@@ -416,6 +372,8 @@ export default function TodaysDealsPage() {
        itemsPerPage={10}
        maxPage={gridMaxPage}
      />
+     <NewArrival />
+
    </div>
    <Footer/>
    </>

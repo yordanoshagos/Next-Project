@@ -1,22 +1,22 @@
 
 import Link from "next/link";
 import { FaShippingFast, FaHeadset, FaUndo } from "react-icons/fa";
-
+import Image from "next/image";
 export default function NewArrival() {
  return (
-   <main className="px-10 py-12">
+   <main className="ml-[-10%] py-12">
      <section className="mb-10">
       
      <div className="flex items-center gap-2 mb-2">
- <div className="w-6 h-10 rounded-sm bg-red-600 ml-45 "></div>
- <span className="text-red-600 font-bold text-sm pb-2">Featured</span>
+ <div className="w-4 h-10 rounded-sm bg-red-400 ml-45 "></div>
+ <span className="text-red-400 text-sm pb-2">Featured</span>
 </div>
        <h1 className="text-3xl font-semibold mt-12 mb-16 ml-45">New Arrival</h1>
-       <div className="flex gap-6">
+       <div className="flex gap-6 ml-16">
          <div className="flex-2">
            <div className="relative rounded-lg overflow-hidden bg-black h-[620px] w-[700px] ml-45">
              <img
-               src="/images/speaker.png"
+               src="/images/long-speakers.png"
                alt="PlayStation 5"
                className=" object-cover brightness-75 pl-17 pt-20"
              />

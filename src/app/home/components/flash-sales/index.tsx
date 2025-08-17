@@ -39,7 +39,7 @@ export default function ProductCarousel({
 }) {
  return (
    <div
-     className="flex w-full overflow-x-auto gap-10 pb-4 px-4 snap-x snap-mandatory scroll-smooth hide-scrollbar"
+     className="flex w-[98%] overflow-x-auto gap-45 pb-4 px-4 snap-x snap-mandatory scroll-smooth hide-scrollbar"
      style={{ scrollPaddingLeft: 24, scrollPaddingRight: 24 }}
    >
      {products.map((product) => (
@@ -61,7 +61,7 @@ export default function ProductCarousel({
          <img
            src={product.image}
            alt={product.name}
-           className="w-[140px] h-[120px] object-contain mt-14"
+           className="w-[170px] h-[180px] object-contain mt-14"
          />
          {product.isCart && (
            <button className="mt-4 w-full bg-black text-white rounded text-base font-medium py-2">

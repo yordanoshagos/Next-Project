@@ -20,7 +20,7 @@ function getTimeLeft(deadline: Date) {
     return { days, hours, minutes, seconds };
 }
 
-export default function Home() {
+export default function ExploreMusic() {
     const deadline = new Date();
     deadline.setDate(deadline.getDate() + 5);
     const [timeLeft, setTimeLeft] = useState(getTimeLeft(deadline));
@@ -32,7 +32,7 @@ export default function Home() {
         return () => clearInterval(timer);
     }, [deadline]);
     return (
-        <div className="bg-white min-h-screen flex flex-col">
+        <div className="bg-white min-h-screen mb-[-12%] flex flex-col w-[97%]">
 
             <section className="
    w-full

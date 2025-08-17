@@ -45,7 +45,7 @@ export default function HomePage() {
   return (
     <main className="font-poppins">
       <div className="mb-10"></div>
-      <section className="px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20 py-6">
+      <section className="px-2 sm:px-6 md:px-10 lg:px-14 xl:px-1 py-6 mb-[10%] w-[95%]">
         <div className="flex gap-2 mb-6 items-center">
           <div className="bg-red-400 w-3.5 h-8.5 rounded-sm"></div>
           <p className="text-red-400 text-sm sm:text-[16px]">Categories</p>
@@ -74,6 +74,7 @@ export default function HomePage() {
         <div
           ref={scrollRef}
           className="flex gap-6 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 overflow-x-auto scroll-smooth hide-scrollbar"
+          data-testid="scroll-container"
         >
           {categories.map(({ name, icon: Icon, active }) => (
             <div

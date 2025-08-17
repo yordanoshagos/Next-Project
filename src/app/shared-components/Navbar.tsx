@@ -1,14 +1,16 @@
-import { FaMagnifyingGlass } from "react-icons/fa6";
 
+'use client';
+import Link from 'next/link';
+import { FaMagnifyingGlass } from 'react-icons/fa6';
 const Navbar = () => {
   return (
     <nav className="border border-gray-200 flex justify-between items-center p-4 bg-white text-black">
       <div className="font-bold text-[30px]">Exclusive</div>
       <ul className="flex space-x-4 text-[16px]">
-        <li><a href="#" className="hover:underline">Home</a></li>
-        <li><a href="#" className="hover:underline">Contact</a></li>
-        <li><a href="#" className="hover:underline">About</a></li>
-        <li><a href="#" className="hover:underline">Sign Up</a></li>
+        <li><Link href="/" className="hover:underline">Home</Link></li>
+        <li><Link href="/contact" className="hover:underline">Contact</Link></li>
+        <li><Link href="/about" className="hover:underline">About</Link></li>
+        <li><Link href= "/signup" className="hover:underline">Sign Up</Link></li>
       </ul>
       <div className="relative text-[12px]">
         <input
@@ -23,5 +25,4 @@ const Navbar = () => {
     </nav>
   );
 };
-
 export default Navbar;

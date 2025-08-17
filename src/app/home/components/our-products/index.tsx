@@ -39,16 +39,15 @@ export default function ExploreProducts({
 }) {
  const visibleProducts = products.slice(page * itemsPerPage, (page + 1) * itemsPerPage);
 
-
  return (
-   <section className="w-full py-1 bg-white">
+   <section className="w-[95%] py-1 bg-white">
      <div className="w-full mx-auto ">
        <div className="flex justify-between items-end mb-7">
          <div>
-           <div className="flex items-center gap-2 mb-2">
-             <span className="w-5 h-10 rounded ml-0 bg-[#DB4444]"></span>
-             <span className="font-semibold text-lg ml-2 text-[#DB4444]">Our Products</span>
-           </div>
+        <div className="flex gap-2 mb-6 items-center">
+          <div className="bg-red-400 w-3.5 h-8.5 rounded-sm"></div>
+          <p className="text-red-400 text-sm sm:text-[16px]">Our Products</p>
+        </div>
            <h2 className="font-inter font-semibold text-[32px] text-black">
              Explore Our Products
            </h2>
@@ -94,7 +93,7 @@ export default function ExploreProducts({
              <img
                src={product.image}
                alt={product.name}
-               className="w-[140px] h-[120px] object-contain mt-14"
+               className="w-[180px] h-[170px] object-contain mt-14"
              />
              {product.isCart && (
                <button className="mt-4 w-full bg-black text-white rounded text-base font-medium py-2">
@@ -104,7 +103,7 @@ export default function ExploreProducts({
              <div className="mt-auto w-full text-left px-4 pb-3">
                <div className="font-medium text-base mt-4 text-black">{product.name}</div>
                <div className="flex items-center gap-2 mb-1">
-                 <span className="text-[#DB4444] font-semibold">${product.price}</span>
+                 <span className="text-red-400 font-semibold">${product.price}</span>
                  {product.oldPrice && (
                    <span className="text-gray-400 line-through text-sm">${product.oldPrice}</span>
                  )}
